@@ -3,10 +3,15 @@ const app = express();
 const port = 4000;
 const cors = require("cors");
 const axios = require("axios");
+const res = require("express/lib/response");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+
+app.get("/hello", cors(), () => {
+  res.send("Hello World !");
+});
 
 app.post("/get-images", cors(), async (req, res) => {
   const data = [];
