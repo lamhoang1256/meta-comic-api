@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000;
+const PORT = process.env.PORT || 4000;
 const cors = require("cors");
 const axios = require("axios");
 
@@ -63,6 +63,6 @@ app.post("/get-images", cors(), async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Listening at http://localhost:${PORT}`);
 });
