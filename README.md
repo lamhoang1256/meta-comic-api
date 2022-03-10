@@ -1,1 +1,1 @@
-# meta-comic-api
+# meta-comic
